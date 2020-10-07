@@ -1,6 +1,8 @@
 package org.damo;
 
-public class Plateau {
+import org.damo.interfaces.IPlateau;
+
+public class Plateau  implements IPlateau {
 
     String plateauName = "";
     int plateauWidth = 0;
@@ -24,5 +26,9 @@ public class Plateau {
         this.plateauName = plateauName;
         this.plateauWidth = plateauWidth;
         this.plateauLength = plateauLength;
+    }
+
+    public String getPlateauName(){
+        return this.plateauName;
     }
 }
