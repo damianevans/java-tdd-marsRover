@@ -10,8 +10,14 @@
 
     </bean>
 
+    <bean id="testPositionBean" class="java.awt.Point">
+        <constructor-arg name="x" value="2"></constructor-arg>
+        <constructor-arg name="y" value="1"></constructor-arg>
+    </bean>
+
     <bean id="InjectwithConstructor" class="org.damo.MarsRover">
         <constructor-arg name="plateau" ref="testPlateauBean"></constructor-arg>
         <constructor-arg name="initialHeading" type="org.damo.Heading" value="EAST"></constructor-arg>
+        <constructor-arg name="initialPosition" type="java.awt.Point"  ref="testPositionBean"></constructor-arg>
     </bean>
 </beans>
